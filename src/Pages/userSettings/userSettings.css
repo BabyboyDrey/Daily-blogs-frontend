@@ -1,0 +1,65 @@
+.containerUS {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  height: 1000px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-right: 200px;
+  cursor: auto;
+}
+
+.IMGcontainer {
+  width: 68%;
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.IMGcontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h1container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  margin: 10px;
+}
+
+.containerForm button {
+  margin: 20px;
+  width: 242px;
+  height: 46px;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #de5429;
+  color: #fae5df;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .containerUS {
+    padding: 0 20px;
+  }
+
+  .IMGcontainer {
+    width: 100%;
+  }
+}

@@ -1,0 +1,388 @@
+.PostContainer {
+  margin-top: 85px;
+  padding: 0 180px;
+}
+.contentContainer {
+  margin-top: 150px;
+}
+
+.img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.TitleAuthor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.TitleAuthor p {
+  align-self: flex-end;
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+.h1container h1 {
+  font-size: 40px;
+  font-family: "Nunito", sans-serif;
+}
+
+.h1container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.outer-bg-comments-container {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+  min-height: 100%;
+  height: fit-content;
+}
+
+.outer-bg-comments-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.outer-bg-comments-container::-webkit-scrollbar-thumb {
+  background-color: #999;
+}
+
+.outer-bg-comments-container::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.inner-bg-comments-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+  height: fit-content;
+}
+
+.h2-c hr {
+  width: 220px;
+}
+
+.contentTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 150px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.contentTime p {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+}
+
+.contentTime button {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  width: 68px;
+  height: 24px;
+  border-radius: 12px;
+  color: black;
+  border: none;
+  color: #f5cabd;
+  background-color: #de5429;
+  cursor: pointer;
+}
+
+.bodyContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bodyContainer {
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+}
+
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.commentSection textarea {
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  outline-color: #d2d1d1;
+  background-color: #6d6b6b;
+}
+
+.commentSection textarea::placeholder {
+  color: #d2d1d1;
+  margin: 40px;
+}
+
+.commentSection button {
+  background-color: #dcf5bd;
+  color: #406412;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  width: 88px;
+  height: 34px;
+  border-radius: 12px;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.commentsSect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments {
+  background-color: #525050;
+  width: 70%;
+  height: 178px;
+  border-top: 30px #6d6b6b solid;
+  color: #d2d1d1;
+  display: flex;
+  font-size: 21px;
+  font-family: "Nunito", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.moreAboutAuthor {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.moreAboutAuthor h3,
+.catText h3 {
+  font-size: 30px;
+  font-family: "Nunito", sans-serif;
+}
+
+.category h4 {
+  padding: 3px;
+  margin: 6px;
+  margin-left: 10px;
+  font-weight: 400px;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.Blogs {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.catText {
+  width: 160px;
+}
+
+.category {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .PostContainer {
+    padding: 0 10px;
+    margin-top: 60px;
+  }
+
+  .h2-c hr {
+    width: 160px;
+  }
+
+  .comments h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .TitleAuthor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+
+  .TitleAuthor p {
+    align-self: flex-end;
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+  }
+
+  .h1container h1 {
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .h1container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .contentTime {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 150px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .contentTime p {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .contentTime button {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    width: 68px;
+    height: 24px;
+    border-radius: 12px;
+    color: black;
+    border: none;
+    color: #f5cabd;
+    background-color: #de5429;
+    cursor: pointer;
+  }
+
+  .bodyContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .bodyContainer {
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .commentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .commentSection textarea {
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .commentSection textarea::placeholder {
+    margin: 40px;
+  }
+
+  .commentSection button {
+    background-color: #dcf5bd;
+    color: #406412;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    width: 88px;
+    height: 34px;
+    border-radius: 12px;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  .commentsSect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comments {
+    padding: 0 10px;
+    background-color: #525050;
+    width: 70%;
+    height: 178px;
+    border-top: 30px #6d6b6b solid;
+    color: #d2d1d1;
+    display: flex;
+    font-size: 21px;
+    font-family: "Nunito", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .moreAboutAuthor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .moreAboutAuthor h3,
+  .catText h3 {
+    font-size: 30px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .category h4 {
+    padding: 3px;
+    margin: 6px;
+    margin-left: 10px;
+    font-weight: 400px;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .Blogs {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .catText {
+    width: 160px;
+  }
+
+  .category {
+    margin: 10px 0;
+    padding-top: 5px;
+  }
+}

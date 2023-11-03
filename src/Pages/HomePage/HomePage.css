@@ -1,0 +1,310 @@
+.heroSect {
+  margin-top: 85px;
+  padding: 30px;
+  width: 100%;
+  height: 500px;
+  background-color: #313030;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* overflow-x: hidden; */
+}
+
+.heroText {
+  width: 300px;
+  height: 500px;
+}
+
+.heroText h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 104px;
+  font-weight: bold;
+  text-align: left;
+
+  line-height: 80px;
+}
+
+.heroText h1:nth-child(1) {
+  color: #fceeea;
+}
+
+.heroText h1:nth-child(2) {
+  color: #de5429;
+}
+
+.heroText h1:nth-child(3) {
+  color: #80c825;
+}
+
+.heroSectButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imgButtonsConatiner {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.imgButtonsConatiner img {
+  width: 666px;
+  height: 272px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.heroSectButtons button {
+  margin: 20px;
+  width: 242px;
+  height: 46px;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.loginButton {
+  background-color: #dcf5bd;
+  border-radius: 12px;
+  color: #406412;
+}
+
+.signUpButton {
+  background-color: #de5429;
+  color: #fae5df;
+  border-radius: 12px;
+}
+
+.BlogPosts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+}
+
+.CatBlogPost h3 {
+  cursor: pointer;
+}
+
+.CatBlogPosts {
+  margin-bottom: 20px;
+}
+
+.Categories {
+  height: 100%;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.catSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.blogsSection {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.CatBlogPosts h3 {
+  height: 100%;
+  width: 160px;
+  padding: 3px;
+  margin: 6px;
+  margin-left: 10px;
+  font-weight: 400px;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+}
+
+.Categories h2 {
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+}
+
+.CTA-container {
+  height: 600px;
+  background-color: #642612;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.CTA-container h2 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.CTA-container button {
+  margin: 20px;
+  width: 242px;
+  height: 46px;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #de5429;
+  color: #fae5df;
+  border-radius: 12px;
+}
+
+.form,
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+form h3 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  font-size: 57px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+form input,
+form textarea {
+  background-color: #e9e9e9;
+  border: none;
+  height: 78px;
+  width: 100%;
+  margin: 10px;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  outline-color: #642612;
+}
+
+form button {
+  background-color: #406412;
+  color: #dcf5bd;
+  width: 242px;
+  height: 45px;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #626060;
+  padding-left: 20px;
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .heroSect {
+    margin-top: 85px;
+    padding: 30px;
+    width: 100vh;
+  }
+
+  .blogsSection {
+    padding: 0 10px;
+  }
+
+  .imgButtonsConatiner img {
+    width: 90vw;
+    height: 192px;
+  }
+
+  .heroSectButtons button {
+    width: 122px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .CTA-container h2 {
+    font-size: 57px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .heroSect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: hidden;
+    width: 100%;
+    height: 700px;
+  }
+  .heroText h1 {
+    text-align: center;
+    font-size: 84px;
+  }
+
+  .BlogPosts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .Categories {
+    width: 160px;
+    padding: 10px;
+  }
+
+  .catHr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .catSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  /* .blogsSection {
+    padding-left: 50px;
+    padding-right: 50px;
+  } */
+}
