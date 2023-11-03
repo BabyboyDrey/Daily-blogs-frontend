@@ -8,13 +8,11 @@ const Header = () => {
   const toggleNav = () => {
     if (!navActive) {
       setNavActive(true)
-      console.log(`1 navActive: ${navActive}`)
-      setClosing(true)
+      setClosing(false)
     } else {
       setClosing(true)
       setTimeout(() => {
         setNavActive(false)
-        console.log(`2 navActive: ${navActive}`)
         setClosing(false)
       }, 600)
     }
