@@ -17,7 +17,7 @@ const UserSettings = () => {
   const { user, dispatch } = useContext(Context)
 
   console.log(user)
-  const PF = `${server}/images/`
+  const PF = `https://daily-blogs-backend.onrender.com/images/`
 
   const handleSubmit = async e => {
     e.preventDefault()

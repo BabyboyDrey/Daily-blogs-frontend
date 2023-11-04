@@ -13,7 +13,7 @@ const SinglePost = () => {
   const location = useLocation()
   const path = location.pathname.split('/')[2]
 
-  const PF = `${server}/images/`
+  const PF = `https://daily-blogs-backend.onrender.com/images/`
   const { user } = useContext(Context)
   const [postItems, setPostItems] = useState([])
   const [title, setTitle] = useState('')

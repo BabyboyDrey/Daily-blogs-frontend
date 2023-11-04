@@ -6,7 +6,7 @@ import { server } from '../../server'
 const BlogPost = () => {
   const [postItems, setPostItems] = useState([])
 
-  const PF = `${server}/images/`
+  const PF = `https://daily-blogs-backend.onrender.com/images/`
 
   useEffect(() => {
     const fetchPosts = async () => {

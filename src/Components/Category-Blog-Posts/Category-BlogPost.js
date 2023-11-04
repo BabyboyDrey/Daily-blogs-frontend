@@ -3,7 +3,7 @@ import './CategoryBlogPost.css'
 import { server } from '../../server'
 
 const CategoryBlogPost = ({ post }) => {
-  const PF = `${server}/images/`
+  const PF = `https://daily-blogs-backend.onrender.com/images/`
 
   return (
     <>
