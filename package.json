@@ -1,5 +1,5 @@
 {
-  "proxy": "https://daily-blogs-backend.onrender.com/api/",
+  "proxy": "https://daily-blogs-backend.onrender.com/api",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
