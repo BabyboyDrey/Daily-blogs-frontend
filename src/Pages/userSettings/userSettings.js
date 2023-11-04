@@ -3,6 +3,7 @@ import './userSettings.css'
 import axios from 'axios'
 import { Context } from '../../context/Context'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 
 const UserSettings = () => {
   tabTitle('User setting')
@@ -16,7 +17,7 @@ const UserSettings = () => {
   const { user, dispatch } = useContext(Context)
 
   console.log(user)
-  const PF = 'http://localhost:8080/images/'
+  const PF = `${server}/images/`
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -31,19 +32,19 @@ const UserSettings = () => {
     if (image) {
       const data = new FormData()
       const imageName = Date.now() + image.name
-      console.log(imageName)
+
       data.append('name', imageName)
       data.append('file', imageName)
       updatedUser.profilePic = imageName
       try {
-        await axios.post('upload', data)
+        await axios.post(`${server}/upload`, data)
       } catch (err) {
         console.log(err)
       }
     }
 
     try {
-      const res = await axios.put('/user/' + user._id, updatedUser)
+      const res = await axios.put(`${server}/user/` + user._id, updatedUser)
       setSuccess(true)
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data })
     } catch (err) {

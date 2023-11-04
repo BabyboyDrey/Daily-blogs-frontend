@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import './BlogPost.css'
 import axios from 'axios'
+import { server } from '../../server'
 
 const BlogPost = () => {
   const [postItems, setPostItems] = useState([])
 
-  const PF = 'http://localhost:8080/images/'
+  const PF = `${server}/images/`
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('/post/allPosts')
+        const res = await axios.get(`${server}/post/allPosts`)
 
         setPostItems(res.data)
       } catch (err) {
@@ -23,7 +24,11 @@ const BlogPost = () => {
   return (
     <>
       {postItems.map(post => (
-        <a key={post._id} className='blogLink' href={`/post/${post._id}`}>
+        <a
+          key={post._id}
+          className='blogLink'
+          href={`${server}/post/${post._id}`}
+        >
           <div className='container'>
             <img src={PF + post.img} />
             <div className='content'>

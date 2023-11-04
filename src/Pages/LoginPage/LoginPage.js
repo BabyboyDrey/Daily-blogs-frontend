@@ -3,6 +3,7 @@ import { Context } from '../../context/Context'
 import './LoginPage.css'
 import axios from 'axios'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 
 const LoginPage = () => {
   tabTitle(`Login page`)
@@ -14,7 +15,7 @@ const LoginPage = () => {
     e.preventDefault()
     dispatch({ type: 'LOGIN_START' })
     try {
-      const res = await axios.post('/auth/login', {
+      const res = await axios.post(`${server}/auth/login`, {
         email: emailRef.current.value,
         password: passwordRef.current.value
       })

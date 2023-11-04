@@ -7,12 +7,13 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import CategoryBlogPost from '../../Components/Category-Blog-Posts/Category-BlogPost'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 
 const SinglePost = () => {
   const location = useLocation()
   const path = location.pathname.split('/')[2]
 
-  const PF = 'http://localhost:8080/images/'
+  const PF = `${server}/images/`
   const { user } = useContext(Context)
   const [postItems, setPostItems] = useState([])
   const [title, setTitle] = useState('')
@@ -25,7 +26,7 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchSinglePost = async () => {
       try {
-        const res = await axios.get('/post/' + path)
+        const res = await axios.get(`${server}/post/` + path)
         const postData = res.data
         setPostItems(postData)
         setTitle(postData.title)
@@ -41,7 +42,7 @@ const SinglePost = () => {
     if (path) {
       const fetchComments = async () => {
         await axios
-          .get(`/post/get-post-comments/${path}`)
+          .get(`${server}/post/get-post-comments/${path}`)
           .then(r => {
             setPostComments(r.data)
           })
@@ -55,7 +56,7 @@ const SinglePost = () => {
   useEffect(() => {
     async function fetchAllPosts () {
       await axios
-        .get('/post/allPosts')
+        .get(`${server}/post/allPosts`)
         .then(r => {
           const newFiles = r.data
           const newP = newFiles.filter(p => {
@@ -85,7 +86,7 @@ const SinglePost = () => {
     }
 
     await axios
-      .post('/post/create-comment', newComment)
+      .post(`${server}/post/create-comment`, newComment)
       .then(r => {
         toast.success('Comment sent!')
         setComment('')
@@ -96,7 +97,7 @@ const SinglePost = () => {
   useEffect(() => {
     async function fetchRelatedPosts () {
       await axios
-        .get('/post/category-linked-books')
+        .get(`${server}/post/category-linked-books`)
         .then(r => {
           setCatPosts(r.data)
         })

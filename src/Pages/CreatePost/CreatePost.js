@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { Context } from '../../context/Context'
 import { toast } from 'react-toastify'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 
 const CreatePost = () => {
   tabTitle('Create Post')
@@ -27,7 +28,7 @@ const CreatePost = () => {
 
     try {
       await axios
-        .post('/post/createPost', newForm)
+        .post(`${server}/post/createPost`, newForm)
         .then(r => toast.success('Post created'))
         .catch(err => toast.error(err))
     } catch (err) {

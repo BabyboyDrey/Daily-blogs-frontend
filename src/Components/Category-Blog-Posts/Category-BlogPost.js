@@ -1,14 +1,19 @@
 import React from 'react'
 import './CategoryBlogPost.css'
+import { server } from '../../server'
 
 const CategoryBlogPost = ({ post }) => {
-  const PF = 'http://localhost:8080/images/'
+  const PF = `${server}/images/`
 
   return (
     <>
       {post.length > 0 &&
         post.map(post => (
-          <a key={post._id} className='blogLink' href={`/post/${post._id}`}>
+          <a
+            key={post._id}
+            className='blogLink'
+            href={`${server}/post/${post._id}`}
+          >
             <div className='container'>
               <img src={PF + post.img} />
               <div className='content'>

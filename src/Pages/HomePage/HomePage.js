@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import CategoryBlogPost from '../../Components/Category-Blog-Posts/Category-BlogPost'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 const HomePage = () => {
   tabTitle(`Home page`)
   const [catPosts, setCatPosts] = useState([])
@@ -14,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     async function fetchRelatedPosts () {
       await axios
-        .get('/post/category-linked-books')
+        .get(`${server}/post/category-linked-books`)
         .then(r => {
           setCatPosts(r.data)
         })
@@ -26,7 +27,7 @@ const HomePage = () => {
   useEffect(() => {
     async function fetchAllPosts () {
       await axios
-        .get('/post/allPosts')
+        .get(`${server}/post/allPosts`)
         .then(r => {
           setAllPosts(r.data)
           console.log(`allPosts:`, allPosts)

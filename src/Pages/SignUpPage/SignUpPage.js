@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './SignUpPage.css'
 import axios from 'axios'
 import { tabTitle } from '../../genFunctions'
+import { server } from '../../server'
 
 const SignUpPage = () => {
   tabTitle(`Sign up page`)
@@ -15,7 +16,7 @@ const SignUpPage = () => {
     setError(false)
 
     try {
-      const res = await axios.post('/auth/sign-up', {
+      const res = await axios.post(`${server}/auth/sign-up`, {
         username,
         email,
         password
