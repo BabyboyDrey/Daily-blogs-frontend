@@ -24,11 +24,7 @@ const BlogPost = () => {
   return (
     <>
       {postItems.map(post => (
-        <a
-          key={post._id}
-          className='blogLink'
-          href={`${server}/post/${post._id}`}
-        >
+        <a key={post._id} className='blogLink' href={`/post/${post._id}`}>
           <div className='container'>
             <img src={PF + post.img} />
             <div className='content'>
