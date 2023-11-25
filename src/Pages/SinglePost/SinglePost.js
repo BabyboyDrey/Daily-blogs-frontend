@@ -140,24 +140,28 @@ const SinglePost = () => {
           <div className='bodyContainer'>
             <p>{postItems.content}</p>
           </div>
-          <div className='commentSection'>
-            <textarea
-              value={comment}
-              onChange={e => {
-                setComment(e.target.value)
-              }}
-              rows='5'
-              cols='30'
-              placeholder='Comment'
-            ></textarea>
-            <button type='submit' onClick={submitComment}>
-              Submit
-            </button>
-          </div>
+          {user ? (
+            <div className='commentSection'>
+              <textarea
+                value={comment}
+                onChange={e => {
+                  setComment(e.target.value)
+                }}
+                rows='5'
+                cols='30'
+                placeholder='Comment'
+              ></textarea>
+              <button type='submit' onClick={submitComment}>
+                Submit
+              </button>
+            </div>
+          ) : (
+            <h2>Be the first to comment</h2>
+          )}
           <div className='commentsSect'>
             <div className='comments'>
-              <div className='outer-bg-comsasments-container'>
-                {user ? (
+              <div className='outer-bg-comments-container'>
+                {postComments ? (
                   postComments.length > 0 &&
                   postComments.map((p, index) => (
                     <div className='inner-bg-comments-container' key={index}>
@@ -169,7 +173,7 @@ const SinglePost = () => {
                     </div>
                   ))
                 ) : (
-                  <h2>Login to comment</h2>
+                  <h2>Be the first to comment</h2>
                 )}
               </div>
             </div>
