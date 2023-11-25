@@ -156,7 +156,7 @@ const SinglePost = () => {
           </div>
           <div className='commentsSect'>
             <div className='comments'>
-              <div className='outer-bg-comments-container'>
+              <div className='outer-bg-comsasments-container'>
                 {user ? (
                   postComments.length > 0 &&
                   postComments.map((p, index) => (
@@ -169,7 +169,7 @@ const SinglePost = () => {
                     </div>
                   ))
                 ) : (
-                  <h2>Be the first to comment</h2>
+                  <h2>Login to comment</h2>
                 )}
               </div>
             </div>
