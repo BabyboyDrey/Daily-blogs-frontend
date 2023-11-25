@@ -71,7 +71,7 @@ const HomePage = () => {
             ))
           ) : (
             <div>
-              <h2>No posts yet</h2>
+              <h2>Loading...</h2>
             </div>
           )}
           <div className='CatBlogPosts'>
@@ -92,7 +92,7 @@ const HomePage = () => {
                 ))
               ) : (
                 <div>
-                  <h2>No posts yet</h2>
+                  <h2>Loading...</h2>
                 </div>
               )}
             </section>
