@@ -157,7 +157,7 @@ const SinglePost = () => {
           <div className='commentsSect'>
             <div className='comments'>
               <div className='outer-bg-comments-container'>
-                {postComments ? (
+                {user ? (
                   postComments.length > 0 &&
                   postComments.map((p, index) => (
                     <div className='inner-bg-comments-container' key={index}>
